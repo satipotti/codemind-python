@@ -1,14 +1,14 @@
 n=int(input())
+is_nagative=0
 if n<0:
-    t=-n
-else:
-    t=n
+    is_nagative=1
+    n=-n
 rev=0
-while t>0:
-    r=t%10
+while n>0:
+    r=n%10
     rev=rev*10+r
-    t=t//10
-if n<0:
+    n=n//10
+if is_nagative==1:
     print(-rev)
 else:
     print(rev)
